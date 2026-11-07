@@ -1,0 +1,36 @@
+What is FastMCP?
+FastMCP is a Python framework that makes it easier to build MCP servers.
+
+Without FastMCP, we would need to write more code to handle MCP communication.
+
+With FastMCP, we can create an MCP tool using a simple Python function
+
+ python -m pip install fastmcp
+
+
+ We'll use SQLite, a lightweight SQL database.
+
+Why SQLite?
+- No separate database server installation.
+- No username or password configuration.
+- Database is stored in a single file.
+- Python supports SQLite automatically.
+Our database will contain customer information that the MCP server can access.
+
+Until now, we created a database that stores customer information.
+
+However, the database cannot communicate with an AI assistant through MCP yet.
+
+We need an MCP server to act as a bridge:
+
+he MCP server will:
+1. Receive requests from an MCP client.
+2. Connect to the SQLite database.
+3. Retrieve information.
+4. Return results to the client.
+5.2 Create the server file
+In VS Code:
+1. Open your project folder.
+2. Right-click the folder.
+3. Select New File.
+4. Name it:
